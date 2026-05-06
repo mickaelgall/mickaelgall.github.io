@@ -260,20 +260,46 @@
                     <h2 class="text-3xl font-bold text-dark">Veille technologique</h2>
                 </div>
                 
-                <div class="bg-gradient-to-r from-dark to-gray-800 text-white rounded-xl shadow-lg p-6 md:p-8 mb-8">
-                    <h3 class="text-2xl font-bold mb-4">Ma démarche de veille</h3>
-                    <p class="text-gray-300 mb-6">
+                <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-8">
+                    <h3 class="text-2xl font-bold mb-4 text-dark">Ma démarche de veille</h3>
+                    <p class="text-gray-700 mb-6">
                         Dans le domaine des systèmes et réseaux, la veille technologique est essentielle pour rester à jour sur les évolutions, les nouvelles vulnérabilités et les meilleures pratiques. J'utilise plusieurs outils et sources pour ma veille quotidienne.
                     </p>
+
+                    <div id="veille-captures" class="mb-6">
+                        <h4 class="text-lg font-semibold text-dark mb-3">Captures de veille</h4>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="rounded-lg overflow-hidden border border-gray-100 shadow-sm bg-gradient-to-br from-blue-50 to-blue-100">
+                                <svg class="w-full h-56" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="400" height="300" fill="#f0f9ff"/>
+                                    <text x="200" y="120" font-size="24" font-weight="bold" text-anchor="middle" fill="#1e40af" font-family="Inter, sans-serif">Veille Technologique</text>
+                                    <text x="200" y="160" font-size="14" text-anchor="middle" fill="#3b82f6" font-family="Inter, sans-serif">Cybersécurité &amp; Réseaux</text>
+                                    <circle cx="200" cy="220" r="30" fill="#0ea5e9" opacity="0.3"/>
+                                    <circle cx="150" cy="240" r="20" fill="#3b82f6" opacity="0.3"/>
+                                    <circle cx="250" cy="250" r="15" fill="#0ea5e9" opacity="0.3"/>
+                                </svg>
+                            </div>
+                            <div class="rounded-lg overflow-hidden border border-gray-100 shadow-sm bg-gradient-to-br from-green-50 to-green-100">
+                                <svg class="w-full h-56" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="400" height="300" fill="#f0fdf4"/>
+                                    <text x="200" y="120" font-size="24" font-weight="bold" text-anchor="middle" fill="#15803d" font-family="Inter, sans-serif">Administration Réseau</text>
+                                    <text x="200" y="160" font-size="14" text-anchor="middle" fill="#22c55e" font-family="Inter, sans-serif">pfSense &amp; OPNsense</text>
+                                    <rect x="80" y="190" width="60" height="50" fill="#22c55e" opacity="0.3" rx="5"/>
+                                    <rect x="170" y="190" width="60" height="50" fill="#16a34a" opacity="0.3" rx="5"/>
+                                    <rect x="260" y="190" width="60" height="50" fill="#22c55e" opacity="0.3" rx="5"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="bg-white/10 rounded-lg p-5">
-                            <h4 class="text-xl font-semibold mb-4">Outils utilisés</h4>
+                        <div class="bg-gradient-to-r from-blue-50 to-light rounded-xl p-5">
+                            <h4 class="text-xl font-semibold mb-4 text-dark">Outils utilisés</h4>
                             <div id="veille-outils" class="space-y-4"></div>
                         </div>
                         
-                        <div class="bg-white/10 rounded-lg p-5">
-                            <h4 class="text-xl font-semibold mb-4">Sujets suivis</h4>
+                        <div class="bg-gradient-to-r from-gray-50 to-light rounded-xl p-5">
+                            <h4 class="text-xl font-semibold mb-4 text-dark">Sujets suivis</h4>
                             <div id="veille-sujets" class="space-y-4"></div>
                         </div>
                     </div>
@@ -306,10 +332,7 @@
                 
                 <nav id="sommaire-nav" class="space-y-2"></nav>
                 
-                <div class="mt-12 pt-8 border-t border-gray-300">
-                    <h4 class="font-semibold text-dark mb-4">Compétences clés</h4>
-                    <div id="skills-summary" class="space-y-4"></div>
-                </div>
+                
                 
                 <div class="mt-8 pt-6 border-t border-gray-300">
                     <h4 class="font-semibold text-dark mb-4">Contact rapide</h4>
@@ -359,7 +382,7 @@
                 </div>
                 
                 <div class="text-center md:text-right">
-                    <p class="text-gray-300 mb-2">Ce portfolio est modifiable via les données JavaScript</p>
+                    <p class="text-gray-300 mb-2">Ce portfolio est modifiable via les données JavaScript.</p>
                     <p class="text-sm text-gray-400">Dernière mise à jour: Mars 2026</p>
                 </div>
             </div>
@@ -379,13 +402,13 @@
                 location: "Lyon, France",
                 description: "Actuellement en deuxième année de BTS SIO (Services Informatiques aux Organisations) option SISR (Solutions d'Infrastructure, Systèmes et Réseaux), je me passionne pour l'administration des systèmes et la sécurité informatique. Mon parcours m'a permis d'acquérir des compétences en gestion d'infrastructure, virtualisation et administration réseau.",
                 objectives: [
-                    "Développer une expertise en cybersécurité",
-                    "Travailler dans une entreprise innovante du numérique"
+                    "Développer une expertise en réseaux et dépannage client.",
+                    "Travailler dans une entreprise innovante du numérique."
                 ],
                 interests: [
                     { name: "Sécurité informatique", icon: "fas fa-shield-alt", color: "bg-red-100 text-red-600" },
                     { name: "Virtualisation", icon: "fas fa-server", color: "bg-blue-100 text-blue-600" },
-                    { name: "Cloud Computing", icon: "fas fa-cloud", color: "bg-indigo-100 text-indigo-600" },
+                    { name: "Support client", icon: "fas fa-headset", color: "bg-yellow-100 text-yellow-600" },
                     { name: "Réseaux", icon: "fas fa-network-wired", color: "bg-green-100 text-green-600" }
                 ]
             },
@@ -470,43 +493,41 @@
                 type: "Stage de fin d'études",
                 location: "Lyon et région",
                 missions: [
-                    "Participation à l'administration d'un parc informatique",
-                    "Surveillance et maintenance des serveurs",
-                    "Support aux utilisateurs (niveau 2)",
-                    "Documentation technique",
-                    "Tests de sécurité basiques"
+                    "Participation à l'administration d'un parc informatique.",
+                    "Surveillance et maintenance des serveurs.",
+                    "Support aux utilisateurs (niveau 2).",
+                    "Documentation technique.",
+                    "Tests de sécurité basiques."
                 ]
             },
             
             // Veille technologique
             veille: {
                 outils: [
-                    { name: "Feedly", description: "Aggrégateur de flux RSS", icon: "fas fa-rss" },
-                    { name: "Twitter/X", description: "Suivi d'experts", icon: "fab fa-twitter" },
-                    { name: "Reddit", description: "Communautés spécialisées", icon: "fab fa-reddit" },
-                    { name: "Podcasts", description: "Émissions techniques", icon: "fas fa-podcast" }
+                    { name: "FeedMe", description: "Lecteur de flux et agrégateur personnel.", icon: "fas fa-book-reader" },
+                    { name: "Google Actualités", description: "Google Actualités pour les alertes et tendances.", icon: "fas fa-newspaper" },
+                    { name: "RSS", description: "Abonnement aux flux RSS.", icon: "fas fa-rss" }
                 ],
                 sujets: [
-                    { name: "Cybersécurité", description: "Nouvelles vulnérabilités", icon: "fas fa-lock" },
-                    { name: "Cloud", description: "AWS, Azure, GCP", icon: "fas fa-cloud" },
-                    { name: "DevOps", description: "Automatisation, CI/CD", icon: "fas fa-code-branch" },
-                    { name: "Réseaux", description: "SD-WAN, 5G", icon: "fas fa-wifi" }
+                    { name: "Cybersécurité", description: "cert-fr, zataz.com.", icon: "fas fa-shield-alt" },
+                    { name: "Hardware", description: "cowcotland.com, Le Comptoir du Hardware, Tom's Hardware.", icon: "fas fa-microchip" },
+                    { name: "Réseaux", description: "it-connect.", icon: "fas fa-network-wired" }
                 ]
             },
             
-            // Compétences détaillées
+                // Compétences détaillées
                 competences: [
                 {
                     category: "Systèmes d'exploitation",
-                    skills: ["Windows Server 2019/2022", "Active Directory", "Hyper-V"]
+                    skills: ["Windows Server 2019/2022", "Windows 10", "Windows 11", "Linux"]
                 },
                 {
                     category: "Réseaux & Infrastructure",
-                    skills: ["Configuration réseau", "VLAN & Routing", "Firewalls", "Cloud Computing"]
+                    skills: ["Configuration réseau", "VLAN et routage", "Firewalls", "OPNsense", "pfSense", "DHCP", "RADIUS", "Gestion de certificats"]
                 },
                 {
-                    category: "Virtualisation & Cloud",
-                    skills: ["VMware vSphere", "Hyper-V", "AWS Basics", "Docker Basics"]
+                    category: "Virtualisation",
+                    skills: ["VMware vSphere", "Proxmox", "VirtualBox"]
                 }
             ],
             
@@ -627,8 +648,8 @@
                         <i class="${item.icon}"></i>
                     </div>
                     <div>
-                        <h5 class="font-semibold">${item.name}</h5>
-                        <p class="text-sm text-gray-300">${item.description}</p>
+                        <h5 class="font-semibold text-black">${item.name}</h5>
+                        <p class="text-sm text-gray-800">${item.description}</p>
                     </div>
                 </div>`
             ).join("");
@@ -641,8 +662,8 @@
                         <i class="${item.icon}"></i>
                     </div>
                     <div>
-                        <h5 class="font-semibold">${item.name}</h5>
-                        <p class="text-sm text-gray-300">${item.description}</p>
+                        <h5 class="font-semibold text-black">${item.name}</h5>
+                        <p class="text-sm text-gray-800">${item.description}</p>
                     </div>
                 </div>`
             ).join("");
