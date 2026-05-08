@@ -268,27 +268,34 @@
 
                     <div id="veille-captures" class="mb-6">
                         <h4 class="text-lg font-semibold text-dark mb-3">Captures de veille</h4>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div class="rounded-lg overflow-hidden border border-gray-100 shadow-sm bg-gradient-to-br from-blue-50 to-blue-100">
-                                <svg class="w-full h-56" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="400" height="300" fill="#f0f9ff"/>
-                                    <text x="200" y="120" font-size="24" font-weight="bold" text-anchor="middle" fill="#1e40af" font-family="Inter, sans-serif">Veille Technologique</text>
-                                    <text x="200" y="160" font-size="14" text-anchor="middle" fill="#3b82f6" font-family="Inter, sans-serif">Cybersécurité &amp; Réseaux</text>
-                                    <circle cx="200" cy="220" r="30" fill="#0ea5e9" opacity="0.3"/>
-                                    <circle cx="150" cy="240" r="20" fill="#3b82f6" opacity="0.3"/>
-                                    <circle cx="250" cy="250" r="15" fill="#0ea5e9" opacity="0.3"/>
-                                </svg>
-                            </div>
-                            <div class="rounded-lg overflow-hidden border border-gray-100 shadow-sm bg-gradient-to-br from-green-50 to-green-100">
-                                <svg class="w-full h-56" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="400" height="300" fill="#f0fdf4"/>
-                                    <text x="200" y="120" font-size="24" font-weight="bold" text-anchor="middle" fill="#15803d" font-family="Inter, sans-serif">Administration Réseau</text>
-                                    <text x="200" y="160" font-size="14" text-anchor="middle" fill="#22c55e" font-family="Inter, sans-serif">pfSense &amp; OPNsense</text>
-                                    <rect x="80" y="190" width="60" height="50" fill="#22c55e" opacity="0.3" rx="5"/>
-                                    <rect x="170" y="190" width="60" height="50" fill="#16a34a" opacity="0.3" rx="5"/>
-                                    <rect x="260" y="190" width="60" height="50" fill="#22c55e" opacity="0.3" rx="5"/>
-                                </svg>
-                            </div>
+                        <div class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-6">
+                            <a href="assets/veille1.png" target="_blank" rel="noopener noreferrer" class="rounded-lg overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                                <img src="assets/veille1.png" alt="Capture veille 1" class="w-full h-80 object-cover cursor-pointer" loading="lazy">
+                            </a>
+                            <a href="assets/veille2.png" target="_blank" rel="noopener noreferrer" class="rounded-lg overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                                <img src="assets/veille2.png" alt="Capture veille 2" class="w-full h-80 object-cover cursor-pointer" loading="lazy">
+                            </a>
+                            <a href="assets/veille3.png" target="_blank" rel="noopener noreferrer" class="rounded-lg overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                                <img src="assets/veille3.png" alt="Capture veille 3" class="w-full h-80 object-cover cursor-pointer" loading="lazy">
+                            </a>
+                            <a href="assets/veille4.png" target="_blank" rel="noopener noreferrer" class="rounded-lg overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                                <img src="assets/veille4.png" alt="Capture veille 4" class="w-full h-80 object-cover cursor-pointer" loading="lazy">
+                            </a>
+                            <a href="assets/veille5.png" target="_blank" rel="noopener noreferrer" class="rounded-lg overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+                                <img src="assets/veille5.png" alt="Capture veille 5" class="w-full h-80 object-cover cursor-pointer" loading="lazy">
+                            </a>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-blue-50 to-light rounded-xl p-4">
+                            <h4 class="text-lg font-semibold text-dark mb-3">Ressources et Articles</h4>
+                            <ul class="space-y-2">
+                                <li>
+                                    <a href="https://www.it-connect.fr/tuto-proxmox-ve-configurer-firewall/" target="_blank" rel="noopener noreferrer" class="text-accent hover:text-blue-700 flex items-center">
+                                        <i class="fas fa-external-link-alt mr-2"></i>
+                                        Tuto Proxmox VE - Configurer Firewall (IT-Connect)
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     
@@ -437,9 +444,46 @@
                     company: "Hôpital Yves Le Foll",
                     period: "1ère année BTS SIO",
                     location: "Saint-Brieuc",
-                    description: "Stage en administration et support informatique.",
-                    skills: ["Administration", "Support"],
-                    type: "Stage"
+                    description: "Stage en administration et support informatique avec déploiement de postes de travail, configuration de comptes utilisateurs, gestion du GLPI et maintenance du parc informatique.",
+                    skills: ["Windows Server", "GLPI", "Active Directory", "Déploiement", "TSE", "DHCP", "Réseaux"],
+                    type: "Stage",
+                    details: `
+                    <strong>Installation et Configuration:</strong><br>
+                    • Installation de Clarity et Dexcom<br>
+                    • Migration d'EasyVista (remplaçant Info15) pour la gestion des tickets<br>
+                    • Remplacement de PC<br>
+                    <br>
+                    <strong>Processus de Remplacement PC:</strong><br>
+                    • Vérifier MAC, service et IP (si IP 10.132: pas de changement réseau, sinon changement baie/port switch)<br>
+                    • Rechercher le code porte du PC à remplacer sur GLPI<br>
+                    • Récupérer le nom utilisateur et le copier<br>
+                    • Si session auto: me connecter via trace2k8.txt<br>
+                    • Si 2 noms de machines = session auto, sinon non<br>
+                    • Accès: int01.armorsante.org-utilisateur-generique<br>
+                    • Copier le nom selon la dernière nomenclature similaire<br>
+                    • Créer un nouveau compte utilisateur avec prénom différent<br>
+                    • Générer un mot de passe aléatoire<br>
+                    <br>
+                    <strong>Configuration AutoLogon:</strong><br>
+                    • Nouveau compte utilisateur<br>
+                    • Domaine: INT01.armorsante.org<br>
+                    • MDP aléatoire<br>
+                    • Enable AutoLogon<br>
+                    <br>
+                    <strong>Sur Place:</strong><br>
+                    • Se connecter sur la nouvelle session<br>
+                    • TSE Auto: nom utilisateur gca_ch22\"nom_session_auto_ancien_poste\"<br>
+                    • MDP: nom_ancien_poste (depuis trace2k8.txt)<br>
+                    <br>
+                    <strong>Configuration Imprimante:</strong><br>
+                    • Script imprimante<br>
+                    • Session locale: dépannage imprimante<br>
+                    • TSE: tous les programmes support + rafraîchissement imprimante<br>
+                    <br>
+                    <strong>Infrastructure Réseau:</strong><br>
+                    • Plan réseau, serveurs DHCP, scripts, supervision (Centreon)<br>
+                    • VLANs postes de travail: 160, 162, 164, 166, 168 (plage 160.1 à 254)<br>
+                    • VLANs imprimantes: 10.132.104 et 10.132.106`
                 },
                 {
                     title: "Stage - Hôpital Yves Le Foll",
