@@ -244,6 +244,18 @@
                 <div id="notes-stage-container" class="space-y-8"></div>
             </section>
 
+            <!-- Photos Hôpital Yves Le Foll -->
+            <section id="hopital-yves-le-foll" class="section-highlight mb-16 animate-fade-in">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-12 bg-gradient-to-r from-secondary to-accent rounded-lg flex items-center justify-center mr-4">
+                        <i class="fas fa-images text-white text-xl"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-dark">Photos Hôpital Yves Le Foll</h2>
+                </div>
+                
+                <div id="hopital-yves-le-foll-container" class="space-y-8"></div>
+            </section>
+
             <!-- Stage Stlenn Informatique -->
             <section id="stlenn" class="section-highlight mb-16 animate-fade-in">
                 <div class="flex items-center mb-8">
@@ -281,7 +293,7 @@
                     <div class="w-12 h-12 bg-gradient-to-r from-secondary to-accent rounded-lg flex items-center justify-center mr-4">
                         <i class="fas fa-project-diagram text-white text-xl"></i>
                     </div>
-                    <h2 class="text-3xl font-bold text-dark">shéma de mon projet de ma 2eme d'année de bts</h2>
+                    <h2 class="text-3xl font-bold text-dark">schémas de mon projet de ma 2eme d'année de bts</h2>
                 </div>
                 
                 <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
@@ -475,9 +487,10 @@
                 { id: "presentation", title: "Ma présentation", icon: "fas fa-user" },
                 { id: "experiences", title: "Expériences professionnelles", icon: "fas fa-briefcase" },
                 { id: "notes-stage", title: "Prise de note de stage", icon: "fas fa-clipboard" },
+                { id: "hopital-yves-le-foll", title: "Photos Hôpital Yves Le Foll", icon: "fas fa-images" },
                 { id: "stlenn", title: "Stage Stlenn Informatique", icon: "fas fa-folder-open" },
                 { id: "parcours", title: "Mon parcours", icon: "fas fa-graduation-cap" },
-                { id: "projet-2eme", title: "shéma de mon projet de ma 2eme d'année de bts", icon: "fas fa-project-diagram" },
+                { id: "projet-2eme", title: "schémas de mon projet de ma 2eme d'année de bts", icon: "fas fa-project-diagram" },
                 { id: "veille", title: "Veille technologique", icon: "fas fa-binoculars" }
             ],
             
@@ -563,7 +576,6 @@
                 {
                     category: "Installation et Configuration",
                     items: [
-                        "Installation de Clarity",
                         "Installation de Dexcom",
                         "Migration d'EasyVista (remplaçant Info15) pour la gestion des tickets"
                     ]
@@ -571,17 +583,12 @@
                 {
                     category: "Remplacement PC",
                     items: [
-                        "Vérifier MAC, service, IP",
-                        "Si IP 10.132: pas de changement réseau, sinon changement baie/port du switch",
-                        "Rechercher le code porte du PC à remplacer sur GLPI",
-                        "Prendre le nom de l'utilisateur et le copier",
-                        "Si session auto (2 noms de machines) se connecter via trace2k8.txt"
+                        "Vérifier MAC, service, IP"
                     ]
                 },
                 {
                     category: "Configuration du nouveau compte utilisateur",
                     items: [
-                        "Accès: int01.armorsante.org-utilisateur-generique",
                         "Copier le nom selon la dernière nomenclature similaire et créer un nouveau compte",
                         "Utiliser un prénom différent",
                         "Générer un mot de passe aléatoire"
@@ -592,33 +599,42 @@
                     items: [
                         "Nouveau compte utilisateur",
                         "Domaine: INT01.armorsante.org",
-                        "MDP aléatoire généré",
-                        "Enable AutoLogon"
-                    ]
-                },
-                {
-                    category: "Sur place - Connexion TSE",
-                    items: [
-                        "Se connecter sur la nouvelle session",
-                        "TSE Auto: nom utilisateur gca_ch22\\\"nom_session_auto_ancien_poste\"",
-                        "MDP: nom_ancien_poste (depuis trace2k8.txt)"
+                        "MDP aléatoire généré"
                     ]
                 },
                 {
                     category: "Configuration Imprimante",
                     items: [
                         "Script imprimante",
-                        "Session locale: dépannage imprimante",
-                        "TSE: tous les programmes support + rafraîchissement imprimante"
+                        "Session locale: dépannage imprimante"
                     ]
                 },
                 {
                     category: "Infrastructure Réseau",
                     items: [
-                        "Plan réseau, serveurs DHCP, scripts, supervision (Centreon)",
                         "VLANs postes de travail: 160, 162, 164, 166, 168 (plage 160.1 à 254)",
                         "VLANs imprimantes: 10.132.104 et 10.132.106"
                     ]
+                }
+            ],
+            
+            // Photos Hôpital Yves Le Foll
+            hopitalYvesLeFollContent: [
+                {
+                    title: "Baie 1 - Hôpital Yves Le Foll",
+                    image: "assets/baie1.jpg"
+                },
+                {
+                    title: "Baie 2 - Hôpital Yves Le Foll",
+                    image: "assets/baie2.jpg"
+                },
+                {
+                    title: "Baie 3 - Hôpital Yves Le Foll",
+                    image: "assets/baie3.jpg"
+                },
+                {
+                    title: "Baie 4 - Hôpital Yves Le Foll",
+                    image: "assets/baie4.jpg"
                 }
             ],
             
@@ -840,7 +856,7 @@
                         </a>
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-dark mb-2">${item.title}</h3>
-                            <p class="text-gray-600 text-sm">${item.description}</p>
+                            ${item.description ? `<p class="text-gray-600 text-sm">${item.description}</p>` : ''}
                         </div>
                     </div>`
                 ).join("")}
@@ -918,6 +934,7 @@
             document.getElementById("interests-container").innerHTML = renderInterests(portfolioData.personalInfo.interests);
             document.getElementById("experiences-container").innerHTML = renderExperiences(portfolioData.experiences);
             document.getElementById("notes-stage-container").innerHTML = renderNotesStage(portfolioData.notesStage);
+            document.getElementById("hopital-yves-le-foll-container").innerHTML = renderStlennContent(portfolioData.hopitalYvesLeFollContent);
             document.getElementById("stlenn-container").innerHTML = renderStlennContent(portfolioData.stlennContent);
             document.getElementById("parcours-items").innerHTML = renderParcours(portfolioData.parcours);
             
